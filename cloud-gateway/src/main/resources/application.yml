@@ -14,8 +14,7 @@ spring:
         - id: DEPARTMENT-SERVICE
           uri: lb://DEPARTMENT-SERVICE
           predicates:
-            - Path=/deparment/**
-
+            - Path=/department/**
 eureka:
   client:
     register-with-eureka: true
@@ -24,3 +23,5 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     hostname: localhost
+
+
