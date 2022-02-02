@@ -7,13 +7,7 @@ spring:
 
 hystrix:
   dashboard:
-  proxy-stream-allow-list: "*"
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include=*:
+    proxy-stream-allow-list: "*"
 
 eureka:
   client:
