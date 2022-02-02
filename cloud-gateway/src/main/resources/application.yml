@@ -2,6 +2,8 @@ server:
   port: 9191
 
 spring:
+#  main:
+#    web-application-type: reactive
   application:
     name: API-GATEWAY
   cloud:
@@ -11,20 +13,20 @@ spring:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/user/**
-          filters:
-            - name: CircutBreaker
-              args:
-                name: DEPARTMENT-SERVICE
-                fallbackuri: forward:/userServiceFallBack
+#          filters:
+#            - name: CircutBreaker
+#              args:
+#                name: DEPARTMENT-SERVICE
+#                fallbackuri: forward:/userServiceFallBack
         - id: DEPARTMENT-SERVICE
           uri: lb://DEPARTMENT-SERVICE
           predicates:
             - Path=/department/**
-          filters:
-            - name: CircutBreaker
-              args:
-                name: DEPARTMENT-SERVICE
-                fallbackuri: forward:/departmentServiceFallBack
+#          filters:
+#            - name: CircutBreaker
+#              args:
+#                name: DEPARTMENT-SERVICE
+#                fallbackuri: forward:/departmentServiceFallBack
 
 hystrix.command.fallbackcmd.execution.isolation.thread.timeoutInMilliseconds: 4000
 
