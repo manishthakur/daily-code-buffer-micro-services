@@ -1,3 +1,6 @@
+## Config Server Repository
+https://github.com/manishthakur/spring-cloud-config-server.git
+
 # 1. Config Server
 http://localhost:9296
 
