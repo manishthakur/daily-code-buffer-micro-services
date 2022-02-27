@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: HYSTRIX-DASHBOARD
+    name: hystrix-dashboard
 
 hystrix:
   dashboard:
